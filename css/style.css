@@ -1,0 +1,404 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #A50034;
+    /* Traditional Crimson/Maroon */
+    --secondary-color: #D4AF37;
+    /* Antique Gold */
+    --accent-color: #FFF8E1;
+    /* Warm Cream Background */
+    --text-dark: #3E2723;
+    /* Deep Brown text for warmth */
+    --text-light: #ffffff;
+    --transition-speed: 0.3s;
+    --card-shadow: 0 4px 15px rgba(165, 0, 52, 0.15);
+    /* Subtle reddish shadow */
+    --hover-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
+    /* Golden glow on hover */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--accent-color);
+    background-image: linear-gradient(to right, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    /* Subtle grid pattern */
+    line-height: 1.6;
+    padding-top: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.hero-title,
+.section-title {
+    font-family: 'Playfair Display', serif;
+    /* Elegant Serif for headings */
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--secondary-color);
+    /* Gold border */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    position: relative;
+    padding-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    /* Keep Nav links clean */
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    /* Gold underline */
+    transition: width var(--transition-speed);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #880E4F 0%, #BF360C 100%);
+    /* Rich Maroon to Rust Orange */
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+/* Indian Pattern Overlay Effect (CSS Radial) */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(var(--secondary-color) 2px, transparent 2px), radial-gradient(var(--secondary-color) 2px, transparent 2px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+    animation: pan 60s linear infinite;
+}
+
+@keyframes pan {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-20px, -20px);
+    }
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    /* Gold text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #4E342E;
+    /* Dark brown text on gold button */
+    font-weight: 700;
+    padding: 0.85rem 2.5rem;
+    border-radius: 5px;
+    /* Less rounded, more structured */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all var(--transition-speed);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #FFECB3;
+    /* Lighter gold */
+    border-color: #FFECB3;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+    color: var(--primary-color);
+}
+
+/* Featured Products & Cards */
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+/* Decorative element under title */
+.section-title::after {
+    content: '♦';
+    /* Diamond symbol */
+    display: block;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-top: 10px;
+}
+
+.section-container {
+    text-align: center;
+    padding: 5rem 0;
+    background-color: transparent;
+    /* Let body pattern show */
+}
+
+.card {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    /* Subtle gold border */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    height: 100%;
+    background: #fff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--secondary-color);
+}
+
+/* Styles for ACTUAL Images */
+.card-img-top {
+    width: 100%;
+    height: 400px;
+    /* Slightly taller for dresses */
+    object-fit: contain;
+    /* Show the WHOLE image without cropping */
+    object-position: top center;
+    /* Align to top */
+    background-color: #fafafa;
+    /* Light gray background for images with white space */
+    padding: 10px;
+    /* Slight padding to frame the dress */
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+/* Placeholder styles (kept for backward compatibility or loading) */
+.card-img-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-placeholder::after {
+    content: 'View Details';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(165, 0, 52, 0.9);
+    /* Maroon overlay */
+    padding: 12px 25px;
+    border-radius: 4px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: transform var(--transition-speed);
+    opacity: 0;
+}
+
+.card:hover .card-img-placeholder::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+    /* Center align product info */
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+}
+
+.card-text {
+    color: #666;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.price-tag {
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: block;
+    /* Make it block */
+    margin-bottom: 10px;
+}
+
+/* Forms */
+.form-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 3rem auto;
+    border-top: 5px solid var(--primary-color);
+    /* Maroon top border */
+    color: var(--text-dark);
+    position: relative;
+    z-index: 10;
+}
+
+.form-control {
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e0e0e0;
+    transition: border-color var(--transition-speed);
+    background-color: #fff;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-color);
+    /* Gold focus */
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.2);
+}
+
+/* Validation Styles */
+.is-invalid {
+    border-color: #d32f2f !important;
+}
+
+.valid-feedback,
+.invalid-feedback,
+.field-error-text {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.field-error-text {
+    color: #d32f2f;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background-color: #261E1C;
+    /* Very dark brown */
+    color: #e0e0e0;
+    padding: 4rem 0;
+    margin-top: 5rem;
+    border-top: 5px solid var(--secondary-color);
+}
+
+footer h5 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+    /* Slide effect */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Rental Application</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-crown me-2"></i>Rental Application</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="hero-section py-5 text-center">
+        <h1 class="display-4 fw-bold">Our Collection</h1>
+        <p class="lead">Explore the finest range of Cholis and Lehengas.</p>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="container py-5">
+
+        <div class="row g-4 mb-5">
+            <!-- Product 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/royal-velvet-maroon.jpg" class="card-img-top" alt="Royal Velvet Maroon">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Royal Velvet Maroon</h5>
+                        <p class="card-text text-muted flex-grow-1">Exquisite velvet fabric with heavy zardosi
+                            embroidery. Perfect for wedding receptions.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="price-tag">₹3,500/day</span>
+                        </div>
+                        <button class="btn btn-dark w-100" onclick="alert('This feature is currently disabled.');">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/emerald-green-silk.jpeg" class="card-img-top" alt="Emerald Green Silk"
+                        onerror="this.src='images/placeholder.jpg'; this.style.opacity='0.5';">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Emerald Green Silk</h5>
+                        <p class="card-text text-muted flex-grow-1">Pure silk lehenga with minimal gold thread work.
+                            Elegant and lightweight for sangeet.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="price-tag">₹2,800/day</span>
+                        </div>
+                        <button class="btn btn-dark w-100" onclick="alert('This feature is currently disabled.');">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/sunshine-yellow-georgette.jpeg" class="card-img-top" alt="Sunshine Yellow Georgette"
+                        onerror="this.src='images/placeholder.jpg'; this.style.opacity='0.5';">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Sunshine Yellow Georgette</h5>
+                        <p class="card-text text-muted flex-grow-1">Bright and flowy georgette fabric with mirror work.
+                            Ideal for Haldi ceremonies.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="price-tag">₹1,500/day</span>
+                        </div>
+                        <button class="btn btn-dark w-100" onclick="alert('This feature is currently disabled.');">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/midnight-blue-sequin.jpeg" class="card-img-top" alt="Midnight Blue Sequin"
+                        onerror="this.src='images/placeholder.jpg'; this.style.opacity='0.5';">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Midnight Blue Sequin</h5>
+                        <p class="card-text text-muted flex-grow-1">Full sequin work on net fabric. Gives a starry night
+                            effect. Great for cocktail parties.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="price-tag">₹4,200/day</span>
+                        </div>
+                        <button class="btn btn-dark w-100" onclick="alert('This feature is currently disabled.');">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/pastel-pink-organza.jpeg" class="card-img-top" alt="Pastel Pink Organza"
+                        onerror="this.src='images/placeholder.jpg'; this.style.opacity='0.5';">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Pastel Pink Organza</h5>
+                        <p class="card-text text-muted flex-grow-1">Soft organza with floral print and pearl borders.
+                            Very trandy and chic.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="price-tag">₹2,200/day</span>
+                        </div>
+                        <button class="btn btn-dark w-100" onclick="alert('This feature is currently disabled.');">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/classic-red-bridal.jpeg" class="card-img-top" alt="Classic Red Bridal"
+                        onerror="this.src='images/placeholder.jpg'; this.style.opacity='0.5';">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Classic Red Bridal</h5>
+                        <p class="card-text text-muted flex-grow-1">The traditional red bridal lehenga with heavy
+                            gottapatti work. For the main wedding day.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="price-tag">₹6,500/day</span>
+                        </div>
+                        <button class="btn btn-dark w-100" onclick="alert('This feature is currently disabled.');">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Rental Application</h5>
+                    <p>Your premier destination for renting exquisite traditional wear.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Links</h5>
+                    <p><a href="index.html" class="text-white" style="text-decoration: none;">Home</a></p>
+                    <p><a href="about.html" class="text-white" style="text-decoration: none;">About Us</a></p>
+                    <p><a href="products.html" class="text-white" style="text-decoration: none;">Products</a></p>
+                    <p><a href="contact.html" class="text-white" style="text-decoration: none;">Contact</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home mr-3"></i> 123 Fashion Street, City, Country</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@choli-rentals.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +1 234 567 8900</p>
+                </div>
+            </div>
+            <div class="row align-items-center mt-4">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-left">© 2024 Copyright:
+                        <a href="#" style="text-decoration: none;"> <strong class="text-warning">Rental
+                                Application</strong></a>
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

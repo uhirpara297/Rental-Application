@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Rental Application</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-crown me-2"></i>Rental Application</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="hero-section py-5 text-center">
+        <h1 class="display-4 fw-bold">Contact Us</h1>
+        <p class="lead">We'd love to hear from you!</p>
+    </div>
+
+    <!-- Contact Content -->
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+                <div class="form-container m-0 w-100 h-100">
+                    <h3 class="mb-4 text-center fw-bold">Send us a Message</h3>
+
+                    <!-- Success Alert -->
+                    <div id="contactSuccess" class="alert alert-success" role="alert" style="display: none;">
+                        <i class="fas fa-check-circle me-2"></i> Your message has been sent successfully!
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Full Name <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Enter your full name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email Address <span
+                                    class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactPhone" class="form-label">Phone Number <span
+                                    class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="contactPhone" placeholder="10-digit phone number"
+                                required>
+                            <div class="form-text">We'll call you to confirm details.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message <span
+                                    class="text-danger">*</span></label>
+                            <textarea class="form-control" id="contactMessage" rows="5"
+                                placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-lg-5">
+                <div class="p-4 bg-light rounded shadow-sm h-100">
+                    <h3 class="mb-4 fw-bold text-primary">Get in Touch</h3>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="bg-white p-3 rounded-circle shadow-sm text-primary me-3">
+                            <i class="fas fa-map-marker-alt fa-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Our Location</h5>
+                            <p class="text-muted mb-0">123 Fashion Street, Suite 400<br>Downtown, Metropolitan City
+                                10001</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="bg-white p-3 rounded-circle shadow-sm text-primary me-3">
+                            <i class="fas fa-phone-alt fa-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Call Us</h5>
+                            <p class="text-muted mb-0">Mon-Fri from 9am to 6pm</p>
+                            <a href="tel:+12345678900" class="text-decoration-none fw-bold fs-5">+1 (234) 567-8900</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="bg-white p-3 rounded-circle shadow-sm text-primary me-3">
+                            <i class="fas fa-envelope fa-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Email Us</h5>
+                            <p class="text-muted mb-0">For general inquiries and support</p>
+                            <a href="mailto:info@rentalapp.com"
+                                class="text-decoration-none fw-bold fs-5">info@rentalapp.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="mt-4 rounded overflow-hidden shadow-sm border">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15128.532326922588!2d73.745678!3d18.572345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9f3d3bf50ad%3A0xc39p3d6a2f8d8b13!2sHinjewadi%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1628765432109!5m2!1sen!2sin"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Rental Application</h5>
+                    <p>Your premier destination for renting exquisite traditional wear.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Links</h5>
+                    <p><a href="index.html" class="text-white" style="text-decoration: none;">Home</a></p>
+                    <p><a href="about.html" class="text-white" style="text-decoration: none;">About Us</a></p>
+                    <p><a href="products.html" class="text-white" style="text-decoration: none;">Products</a></p>
+                    <p><a href="contact.html" class="text-white" style="text-decoration: none;">Contact</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home mr-3"></i> 123 Fashion Street, City, Country</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@choli-rentals.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +1 234 567 8900</p>
+                </div>
+            </div>
+            <div class="row align-items-center mt-4">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-left">© 2026 Copyright:
+                        <a href="#" style="text-decoration: none;"> <strong class="text-warning">Rental
+                                Application</strong></a>
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+
+</html>
